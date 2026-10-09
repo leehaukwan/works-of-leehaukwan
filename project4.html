@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HauKwan Lee – A Collection of Graphic Works</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+SC:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/project1.css" />
+    <link rel="stylesheet" href="css/project2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- LEFT SIDEBAR NAVIGATION -->
+      <nav class="sidebar">
+        <div class="sidebar-header">
+          <h1>HauKwan Lee</h1>
+          <p class="tagline">Visual Storyteller</p>
+          <p class="sub-tagline">Photography · Film · Design</p>
+        </div>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+          <hr />
+          <p class="copyright">
+            All content copyright the artist. No commercial use without express
+            written permission.
+          </p>
+          <p class="copyright">© 2026 HauKwan Lee.</p>
+        </div>
+      </nav>
+
+      <!-- RIGHT MAIN CONTENT -->
+      <main class="content project-page">
+        <!-- SLIDESHOW CONTAINER -->
+        <div class="slideshow-container" id="slideshowContainer">
+          <!-- Full-Screen Slides -->
+          <div class="slides-wrapper">
+            <!-- SLIDE 1 -->
+            <div class="slide active">
+              <img
+                src="images/RedEarth_1_20260113-IMG_9459-4.jpg"
+                alt="Graphic Work 1"
+              />
+              <div class="slide-caption">
+                <p class="slide-subtitle">" Earth 616 "</p>
+              </div>
+            </div>
+            <!-- SLIDE 2 -->
+            <div class="slide">
+              <img
+                src="images/RedEarth_2_20260113-IMG_9468-2.jpg"
+                alt="Graphic Work 2"
+              />
+            </div>
+            <!-- SLIDE 3 -->
+            <div class="slide">
+              <img
+                src="images/RedEarth_3_20260113-IMG_9473-3.jpg"
+                alt="Graphic Work 2"
+              />
+            </div>
+            <!-- SLIDE 4 -->
+            <div class="slide">
+              <img
+                src="images/RedEarth_4_20260113-IMG_9448-3.jpg"
+                alt="Graphic Work 2"
+              />
+            </div>
+            <!-- SLIDE 5 -->
+            <div class="slide">
+              <img
+                src="images/RedEarth_5_20260113-IMG_9510.jpg"
+                alt="Graphic Work 2"
+              />
+            </div>
+            <!-- SLIDE 6 -->
+            <div class="slide">
+              <img
+                src="images/RedEarth_6_20260113-IMG_9521.jpg"
+                alt="Graphic Work 2"
+              />
+            </div>
+            <!-- SLIDE 7 -->
+            <div class="slide">
+              <img
+                src="images/RedEarth_7_20260113-IMG_9465.jpg"
+                alt="Graphic Work 2"
+              />
+            </div>
+            <!-- SLIDE 8 -->
+            <div class="slide">
+              <img
+                src="images/RedEarth_8_20260113-IMG_9472.jpg"
+                alt="Graphic Work 2"
+              />
+            </div>
+            <!-- SLIDE 9 -->
+            <div class="slide">
+              <img
+                src="images/RedEarth_9_20260113-IMG_9471.jpg"
+                alt="Graphic Work 2"
+              />
+            </div>
+          </div>
+          <!-- End .slides-wrapper -->
+
+          <!-- Navigation Arrows -->
+          <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+          <!-- Enlarge Button (bottom right) -->
+          <button class="enlarge-btn" onclick="toggleFullscreen()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <polyline points="9 21 3 21 3 15"></polyline>
+              <line x1="21" y1="3" x2="14" y2="10"></line>
+              <line x1="3" y1="21" x2="10" y2="14"></line>
+            </svg>
+            <span>Enlarge</span>
+          </button>
+
+          <!-- Thumbnail Strip (hidden by default, shown in fullscreen) -->
+          <div class="thumbnail-strip" id="thumbnailStrip">
+            <img
+              src="images/RedEarth_1_20260113-IMG_9459-4.jpg"
+              onclick="currentSlide(1)"
+              alt="Thumb 1"
+            />
+            <img
+              src="images/RedEarth_2_20260113-IMG_9468-2.jpg"
+              onclick="currentSlide(2)"
+              alt="Thumb 2"
+            />
+            <img
+              src="images/RedEarth_3_20260113-IMG_9473-3.jpg"
+              onclick="currentSlide(3)"
+              alt="Thumb 3"
+            />
+            <img
+              src="images/RedEarth_4_20260113-IMG_9448-3.jpg"
+              onclick="currentSlide(4)"
+              alt="Thumb 4"
+            />
+            <img
+              src="images/RedEarth_5_20260113-IMG_9510.jpg"
+              onclick="currentSlide(5)"
+              alt="Thumb 5"
+            />
+            <img
+              src="images/RedEarth_6_20260113-IMG_9521.jpg"
+              onclick="currentSlide(6)"
+              alt="Thumb 6"
+            />
+            <img
+              src="images/RedEarth_7_20260113-IMG_9465.jpg"
+              onclick="currentSlide(7)"
+              alt="Thumb 7"
+            />
+            <img
+              src="images/RedEarth_8_20260113-IMG_9472.jpg"
+              onclick="currentSlide(8)"
+              alt="Thumb 8"
+            />
+            <img
+              src="images/RedEarth_9_20260113-IMG_9471.jpg"
+              onclick="currentSlide(9)"
+              alt="Thumb 9"
+            />
+          </div>
+        </div>
+        <!-- End .slideshow-container -->
+
+        <!-- PROJECT TITLE + DESCRIPTION -->
+        <div class="project-text">
+          <h2 class="project-title">Red Earth on Dusk</h2>
+
+          <!-- Optional: Project description -->
+          <div class="project-description">
+            <p>
+              The realisation of a non-existent space in dreams. On red earth
+              under burning sunlight, the quiet humming of machines. Memories
+              scattered somewhere between dusk and dawn, half-remembered,
+              half-imagined — a place that only lives between waking and sleep.
+            </p>
+            <!-- Add more description as needed -->
+          </div>
+
+          <!-- Optional: Acknowledgement -->
+          <!--
+                <div class="acknowledgement">
+                    <h3 class="acknowledgement-title">Acknowledgement</h3>
+                    <p class="acknowledgement-text">Text here...</p>
+                </div>
+                -->
+        </div>
+      </main>
+    </div>
+
+    <!-- JAVASCRIPT FOR SLIDESHOW + FULLSCREEN -->
+    <script>
+      let slideIndex = 1;
+      const totalSlides = 9; // ← 9 graphic works
+      let isFullscreen = false;
+      let thumbnailsVisible = true;
+
+      // Change slide
+      function changeSlide(n) {
+        showSlide((slideIndex += n));
+      }
+
+      // Go to specific slide (for thumbnails)
+      function currentSlide(n) {
+        showSlide((slideIndex = n));
+      }
+
+      // Show slide
+      function showSlide(n) {
+        const slides = document.getElementsByClassName("slide");
+        const thumbnails = document.querySelectorAll(".thumbnail-strip img");
+
+        if (n > totalSlides) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = totalSlides;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        for (let i = 0; i < thumbnails.length; i++) {
+          thumbnails[i].classList.remove("active");
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+
+        if (thumbnails[slideIndex - 1]) {
+          thumbnails[slideIndex - 1].classList.add("active");
+        }
+      }
+
+      // Toggle fullscreen
+      function toggleFullscreen() {
+        const container = document.getElementById("slideshowContainer");
+        const strip = document.getElementById("thumbnailStrip");
+        const btn = document.querySelector(".enlarge-btn");
+
+        if (!isFullscreen) {
+          if (container.requestFullscreen) {
+            container.requestFullscreen();
+          } else if (container.webkitRequestFullscreen) {
+            container.webkitRequestFullscreen();
+          }
+          strip.style.display = "flex";
+          thumbnailsVisible = true;
+          btn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="4 14 10 14 10 20"></polyline>
+                        <polyline points="20 10 14 10 14 4"></polyline>
+                        <line x1="10" y1="14" x2="3" y2="21"></line>
+                        <line x1="14" y1="10" x2="21" y2="3"></line>
+                    </svg>
+                    <span>Exit</span>
+                `;
+          isFullscreen = true;
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          }
+          strip.style.display = "none";
+          thumbnailsVisible = false;
+          btn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <polyline points="9 21 3 21 3 15"></polyline>
+                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                    </svg>
+                    <span>Enlarge</span>
+                `;
+          isFullscreen = false;
+        }
+      }
+
+      // Toggle thumbnails on click outside
+      document.addEventListener("click", function (event) {
+        if (!isFullscreen) return;
+
+        const strip = document.getElementById("thumbnailStrip");
+        const btn = document.querySelector(".enlarge-btn");
+
+        if (!strip || !btn) return;
+
+        const clickedInsideStrip = strip.contains(event.target);
+        const clickedOnButton = btn.contains(event.target);
+
+        if (!clickedInsideStrip && !clickedOnButton) {
+          if (strip.style.display === "none") {
+            strip.style.display = "flex";
+            thumbnailsVisible = true;
+          } else {
+            strip.style.display = "none";
+            thumbnailsVisible = false;
+          }
+        }
+      });
+
+      // Fullscreen change event
+      document.addEventListener("fullscreenchange", function () {
+        const strip = document.getElementById("thumbnailStrip");
+        const btn = document.querySelector(".enlarge-btn");
+
+        if (!strip || !btn) return;
+
+        if (!document.fullscreenElement) {
+          strip.style.display = "none";
+          thumbnailsVisible = false;
+          btn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <polyline points="9 21 3 21 3 15"></polyline>
+                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                    </svg>
+                    <span>Enlarge</span>
+                `;
+          isFullscreen = false;
+        } else {
+          strip.style.display = "flex";
+          thumbnailsVisible = true;
+          btn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="4 14 10 14 10 20"></polyline>
+                        <polyline points="20 10 14 10 14 4"></polyline>
+                        <line x1="10" y1="14" x2="3" y2="21"></line>
+                        <line x1="14" y1="10" x2="21" y2="3"></line>
+                    </svg>
+                    <span>Exit</span>
+                `;
+          isFullscreen = true;
+        }
+      });
+
+      // Show initial slide
+      showSlide(slideIndex);
+
+      // Keyboard navigation
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") {
+          changeSlide(-1);
+        } else if (event.key === "ArrowRight") {
+          changeSlide(1);
+        }
+      });
+    </script>
+  </body>
+</html>

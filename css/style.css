@@ -1,0 +1,358 @@
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    height: 100vh;
+}
+
+/* ============================================
+   TWO-COLUMN LAYOUT (Sidebar + Content)
+   ============================================ */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* --- SIDEBAR (Left Column) --- */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+.home-page .sidebar {
+    border-right: none;
+}
+
+/* --- SIDEBAR HEADER (Name + Tagline at Top) --- */
+.sidebar-header {
+    margin-bottom: 40px;  /* Space between tagline and navigation */
+}
+
+.sidebar-header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 4px;   /* Small space between name and tagline */
+}
+
+.sidebar-header .tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+}
+
+.sidebar-header .sub-tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+/* --- NAVIGATION LINKS --- */
+.sidebar ul {
+    list-style: none;
+    flex: 1;  /* Pushes footer to bottom */
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    font-family: 'Cormorant SC', serif;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.sidebar a:hover {
+    color: #999999;
+}
+
+/* --- SIDEBAR FOOTER (Copyright at Bottom) --- */
+.sidebar-footer {
+    margin-top: auto;      /* Pushes footer to the bottom */
+    padding-top: 20px;
+}
+
+.sidebar-footer hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin-bottom: 12px;
+}
+
+.sidebar-footer .copyright {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;     /* Small text for legal info */
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+/* --- MAIN CONTENT (Right Column) --- */
+.content {
+    margin-left: 250px;
+    padding: 40px 50px;
+    flex: 1;
+    overflow-y: auto;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: #ffffff;
+}
+
+/* ============================================
+   HOME PAGE LAYOUT
+   ============================================ */
+.home-page .content {
+    padding-right: 0;    /* ✓ This works — .content is inside .home-page */
+    padding-left: 20px;
+}
+
+.home-page .sidebar {
+    border-right: none;  /* ✓ This works — .sidebar is inside .home-page */
+}
+
+.home-wrapper {
+    display: flex;
+    gap: 40px;
+    height: 100%;
+    align-items: center;
+}
+
+.intro-text {
+    flex: 1;
+    max-width: 40%;
+}
+
+/* TAGLINE "Visual Storyteller" - Cormorant Garamond */
+.intro-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+/* TAGLINE SUBTEXT - Inter (clean and readable) */
+.intro-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* --- Horizontal Scroll Gallery --- */
+.horizontal-scroll {
+    flex: 2;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.scroll-track {
+    display: inline-block;
+    height: 80vh;
+}
+
+.scroll-track img {
+    height: 100%;
+    width: auto;
+    margin-right: 0px;
+    display: inline-block;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+
+
+/* ============================================
+   PORTFOLIO PAGE - VERTICAL GALLERY
+   ============================================ */
+
+   .portfolio-page {
+    overflow-y: auto;  /* Enables vertical scrolling */
+}
+
+/* Each section (Photography, Moving Image) */
+.portfolio-section {
+    margin-bottom: 60px;  /* Space between sections */
+}
+
+/* Section title (e.g., "Photography") */
+.section-title {
+    font-family: 'Cormorant SC', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;  /* Subtle line under section title */
+}
+
+/* 3-column grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+    gap: 25px;  /* Space between items */
+}
+
+/* Each gallery item (image + project name) */
+.gallery-item {
+    display: block;  /* Makes the whole area clickable */
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);  /* Slight lift on hover */
+    opacity: 0.92;
+}
+
+/* Image inside each item */
+.gallery-item img {
+    width: 100%;
+    aspect-ratio: 4 / 3;  /* Consistent 4:3 rectangle (adjust as needed) */
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Project name under each image */
+.gallery-item .project-name {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
+   RESPONSIVE: Adjust for smaller screens
+   ============================================ */
+
+/* Tablets: 2 columns */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Phones: 1 column */
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   PAGE TITLES (Portfolio, About, Services, Contact)
+   ============================================ */
+   .page-title {
+    font-family: 'Cormorant SC', serif;  /* ← Changed to Cormorant SC */
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+
+/* ============================================
+   ABOUT / SERVICES / CONTACT (Text Pages)
+   ============================================ */
+.text-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.text-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+}
+
+
+.text-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.text-content li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    border-left: 2px solid #ccc;
+}
+/* ============================================
+   CONTACT PAGE LINKS
+   ============================================ */
+
+/* Email link */
+.contact-link {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+}
+
+.contact-link:hover {
+    color: #777;
+}
+
+/* Instagram link with icon */
+.social-link {
+    display: inline-flex;      /* Aligns icon and text in a row */
+    align-items: center;       /* Vertically centers icon with text */
+    gap: 8px;                  /* Space between icon and text */
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.2s;
+    margin-top: 8px;
+}
+
+.social-link:hover {
+    color: #777;
+}
+
+.social-link svg {
+    display: block;
+    flex-shrink: 0;            /* Prevents icon from shrinking */
+}

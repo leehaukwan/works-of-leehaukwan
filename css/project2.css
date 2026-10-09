@@ -1,0 +1,157 @@
+/* ============================================
+   PROJECT 2 - VIDEO PAGES
+   ============================================ */
+
+/* --- Video Container --- */
+.video-container {
+    width: 100%;
+    height: 75vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #000;
+}
+
+/* --- Project Text Area (White Background) --- */
+.project-text {
+    background-color: #ffffff;
+    padding: 40px 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- Project Title --- */
+.project-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+/* --- Project Description --- */
+.project-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #333;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.project-description p {
+    margin-bottom: 12px;
+}
+
+/* --- Acknowledgement Section --- */
+.acknowledgement {
+    background-color: #ffffff;
+    padding: 30px 0 10px 0;
+    margin-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.acknowledgement-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+}
+
+.acknowledgement-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 12px;
+    max-width: 100%;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .video-container {
+        height: 50vh;
+    }
+
+    .project-text {
+        padding: 25px 30px;
+    }
+
+    .project-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container {
+        height: 40vh;
+    }
+
+    .project-text {
+        padding: 20px;
+    }
+
+    .project-title {
+        font-size: 1.4rem;
+    }
+
+    .acknowledgement {
+        padding: 20px 0 10px 0;
+    }
+}
+
+/* ============================================
+   TWO-COLUMN TEXT LAYOUT
+   ============================================ */
+
+   .two-column {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.two-column .column {
+    flex: 1;
+}
+
+.two-column .column p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+
+/* ============================================
+   RESPONSIVE: Stack on smaller screens
+   ============================================ */
+
+@media (max-width: 768px) {
+    .two-column {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .two-column .chinese {
+        padding-right: 0;
+        border-right: none;
+    }
+
+    .two-column .english {
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HauKwan Lee – Pillow Talk</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+SC:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/project1.css" />
+    <link rel="stylesheet" href="css/project2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- LEFT SIDEBAR NAVIGATION -->
+      <nav class="sidebar">
+        <div class="sidebar-header">
+          <h1>HauKwan Lee</h1>
+          <p class="tagline">Visual Storyteller</p>
+          <p class="sub-tagline">Photography · Film · Design</p>
+        </div>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="sidebar-footer">
+          <hr />
+          <p class="copyright">
+            All content copyright the artist. No commercial use without express
+            written permission.
+          </p>
+          <p class="copyright">© 2026 HauKwan Lee.</p>
+        </div>
+      </nav>
+
+      <!-- RIGHT MAIN CONTENT -->
+      <main class="content project-page">
+        <!-- SLIDESHOW CONTAINER -->
+        <div class="slideshow-container" id="slideshowContainer">
+          <!-- Full-Screen Slides -->
+          <div class="slides-wrapper">
+            <!-- SLIDE 1 -->
+            <div class="slide active">
+              <img src="images/Vera-IMG_5935.jpg" alt="Pillow Talk 1" />
+            </div>
+            <!-- SLIDE 2 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_5936.jpg" alt="Pillow Talk 2" />
+            </div>
+            <!-- SLIDE 3 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_5970-.jpg" alt="Pillow Talk 3" />
+            </div>
+            <!-- SLIDE 4 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_5986.jpg" alt="Pillow Talk 4" />
+            </div>
+            <!-- SLIDE 5 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_5991.jpg" alt="Pillow Talk 5" />
+            </div>
+            <!-- SLIDE 6 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_5998.jpg" alt="Pillow Talk 6" />
+            </div>
+            <!-- SLIDE 7 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_6002.jpg" alt="Pillow Talk 7" />
+            </div>
+            <!-- SLIDE 8 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_6014.jpg" alt="Pillow Talk 8" />
+            </div>
+            <!-- SLIDE 9 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_6036.jpg" alt="Pillow Talk 9" />
+            </div>
+            <!-- SLIDE 10 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_6040.jpg" alt="Pillow Talk 10" />
+            </div>
+            <!-- SLIDE 11 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_6044.jpg" alt="Pillow Talk 11" />
+            </div>
+            <!-- SLIDE 12 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_6045.jpg" alt="Pillow Talk 12" />
+            </div>
+            <!-- SLIDE 13 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_6054.jpg" alt="Pillow Talk 13" />
+            </div>
+            <!-- SLIDE 14 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_6058.jpg" alt="Pillow Talk 14" />
+            </div>
+            <!-- SLIDE 15 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_6063.jpg" alt="Pillow Talk 15" />
+            </div>
+            <!-- SLIDE 16 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_6081.jpg" alt="Pillow Talk 16" />
+            </div>
+            <!-- SLIDE 17 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_6104.jpg" alt="Pillow Talk 17" />
+            </div>
+            <!-- SLIDE 18 -->
+            <div class="slide">
+              <img src="images/Vera-IMG_6110.jpg" alt="Pillow Talk 18" />
+            </div>
+          </div>
+          <!-- End .slides-wrapper -->
+
+          <!-- Navigation Arrows -->
+          <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+          <!-- Enlarge Button (bottom right) -->
+          <button class="enlarge-btn" onclick="toggleFullscreen()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <polyline points="9 21 3 21 3 15"></polyline>
+              <line x1="21" y1="3" x2="14" y2="10"></line>
+              <line x1="3" y1="21" x2="10" y2="14"></line>
+            </svg>
+            <span>Enlarge</span>
+          </button>
+
+          <!-- Thumbnail Strip (hidden by default, shown in fullscreen) -->
+          <div class="thumbnail-strip" id="thumbnailStrip">
+            <img
+              src="images/Vera-IMG_5935.jpg"
+              onclick="currentSlide(1)"
+              alt="Thumb 1"
+            />
+            <img
+              src="images/Vera-IMG_5936.jpg"
+              onclick="currentSlide(2)"
+              alt="Thumb 2"
+            />
+            <img
+              src="images/Vera-IMG_5970-.jpg"
+              onclick="currentSlide(3)"
+              alt="Thumb 3"
+            />
+            <img
+              src="images/Vera-IMG_5986.jpg"
+              onclick="currentSlide(4)"
+              alt="Thumb 4"
+            />
+            <img
+              src="images/Vera-IMG_5991.jpg"
+              onclick="currentSlide(5)"
+              alt="Thumb 5"
+            />
+            <img
+              src="images/Vera-IMG_5998.jpg"
+              onclick="currentSlide(6)"
+              alt="Thumb 6"
+            />
+            <img
+              src="images/Vera-IMG_6002.jpg"
+              onclick="currentSlide(7)"
+              alt="Thumb 7"
+            />
+            <img
+              src="images/Vera-IMG_6014.jpg"
+              onclick="currentSlide(8)"
+              alt="Thumb 8"
+            />
+            <img
+              src="images/Vera-IMG_6036.jpg"
+              onclick="currentSlide(9)"
+              alt="Thumb 9"
+            />
+            <img
+              src="images/Vera-IMG_6040.jpg"
+              onclick="currentSlide(10)"
+              alt="Thumb 10"
+            />
+            <img
+              src="images/Vera-IMG_6044.jpg"
+              onclick="currentSlide(11)"
+              alt="Thumb 11"
+            />
+            <img
+              src="images/Vera-IMG_6045.jpg"
+              onclick="currentSlide(12)"
+              alt="Thumb 12"
+            />
+            <img
+              src="images/Vera-IMG_6054.jpg"
+              onclick="currentSlide(13)"
+              alt="Thumb 13"
+            />
+            <img
+              src="images/Vera-IMG_6058.jpg"
+              onclick="currentSlide(14)"
+              alt="Thumb 14"
+            />
+            <img
+              src="images/Vera-IMG_6063.jpg"
+              onclick="currentSlide(15)"
+              alt="Thumb 15"
+            />
+            <img
+              src="images/Vera-IMG_6081.jpg"
+              onclick="currentSlide(16)"
+              alt="Thumb 16"
+            />
+            <img
+              src="images/Vera-IMG_6104.jpg"
+              onclick="currentSlide(17)"
+              alt="Thumb 17"
+            />
+            <img
+              src="images/Vera-IMG_6110.jpg"
+              onclick="currentSlide(18)"
+              alt="Thumb 18"
+            />
+          </div>
+        </div>
+        <!-- End .slideshow-container -->
+
+        <!-- PROJECT TITLE + DESCRIPTION -->
+        <div class="project-text">
+          <h2 class="project-title">Pillow Talk</h2>
+
+          <!-- Optional: Project description -->
+          <div class="project-description">
+            <p>
+              A portrait series taken in my bedroom — intimate, quiet, and
+              personal.
+            </p>
+            <!-- Add more description as needed -->
+          </div>
+
+          <!-- Optional: Acknowledgement -->
+          <!--
+                <div class="acknowledgement">
+                    <h3 class="acknowledgement-title">Acknowledgement</h3>
+                    <p class="acknowledgement-text">Text here...</p>
+                </div>
+                -->
+        </div>
+      </main>
+    </div>
+
+    <!-- JAVASCRIPT FOR SLIDESHOW + FULLSCREEN -->
+    <script>
+      let slideIndex = 1;
+      const totalSlides = 18; // ← 18 photos
+      let isFullscreen = false;
+      let thumbnailsVisible = true;
+
+      // Change slide
+      function changeSlide(n) {
+        showSlide((slideIndex += n));
+      }
+
+      // Go to specific slide (for thumbnails)
+      function currentSlide(n) {
+        showSlide((slideIndex = n));
+      }
+
+      // Show slide
+      function showSlide(n) {
+        const slides = document.getElementsByClassName("slide");
+        const thumbnails = document.querySelectorAll(".thumbnail-strip img");
+
+        if (n > totalSlides) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = totalSlides;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        for (let i = 0; i < thumbnails.length; i++) {
+          thumbnails[i].classList.remove("active");
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+
+        if (thumbnails[slideIndex - 1]) {
+          thumbnails[slideIndex - 1].classList.add("active");
+        }
+      }
+
+      // Toggle fullscreen
+      function toggleFullscreen() {
+        const container = document.getElementById("slideshowContainer");
+        const strip = document.getElementById("thumbnailStrip");
+        const btn = document.querySelector(".enlarge-btn");
+
+        if (!isFullscreen) {
+          if (container.requestFullscreen) {
+            container.requestFullscreen();
+          } else if (container.webkitRequestFullscreen) {
+            container.webkitRequestFullscreen();
+          }
+          strip.style.display = "flex";
+          thumbnailsVisible = true;
+          btn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="4 14 10 14 10 20"></polyline>
+                        <polyline points="20 10 14 10 14 4"></polyline>
+                        <line x1="10" y1="14" x2="3" y2="21"></line>
+                        <line x1="14" y1="10" x2="21" y2="3"></line>
+                    </svg>
+                    <span>Exit</span>
+                `;
+          isFullscreen = true;
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          }
+          strip.style.display = "none";
+          thumbnailsVisible = false;
+          btn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <polyline points="9 21 3 21 3 15"></polyline>
+                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                    </svg>
+                    <span>Enlarge</span>
+                `;
+          isFullscreen = false;
+        }
+      }
+
+      // Toggle thumbnails on click outside
+      document.addEventListener("click", function (event) {
+        if (!isFullscreen) return;
+
+        const strip = document.getElementById("thumbnailStrip");
+        const btn = document.querySelector(".enlarge-btn");
+
+        if (!strip || !btn) return;
+
+        const clickedInsideStrip = strip.contains(event.target);
+        const clickedOnButton = btn.contains(event.target);
+
+        if (!clickedInsideStrip && !clickedOnButton) {
+          if (strip.style.display === "none") {
+            strip.style.display = "flex";
+            thumbnailsVisible = true;
+          } else {
+            strip.style.display = "none";
+            thumbnailsVisible = false;
+          }
+        }
+      });
+
+      // Fullscreen change event
+      document.addEventListener("fullscreenchange", function () {
+        const strip = document.getElementById("thumbnailStrip");
+        const btn = document.querySelector(".enlarge-btn");
+
+        if (!strip || !btn) return;
+
+        if (!document.fullscreenElement) {
+          strip.style.display = "none";
+          thumbnailsVisible = false;
+          btn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <polyline points="9 21 3 21 3 15"></polyline>
+                        <line x1="21" y1="3" x2="14" y2="10"></line>
+                        <line x1="3" y1="21" x2="10" y2="14"></line>
+                    </svg>
+                    <span>Enlarge</span>
+                `;
+          isFullscreen = false;
+        } else {
+          strip.style.display = "flex";
+          thumbnailsVisible = true;
+          btn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="4 14 10 14 10 20"></polyline>
+                        <polyline points="20 10 14 10 14 4"></polyline>
+                        <line x1="10" y1="14" x2="3" y2="21"></line>
+                        <line x1="14" y1="10" x2="21" y2="3"></line>
+                    </svg>
+                    <span>Exit</span>
+                `;
+          isFullscreen = true;
+        }
+      });
+
+      // Show initial slide
+      showSlide(slideIndex);
+
+      // Keyboard navigation
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") {
+          changeSlide(-1);
+        } else if (event.key === "ArrowRight") {
+          changeSlide(1);
+        }
+      });
+    </script>
+  </body>
+</html>
