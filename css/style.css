@@ -498,3 +498,36 @@ body {
         height: 40vh;
     }
 }
+/* ============================================
+   HOME SLIDER - VERTICAL ON MOBILE
+   ============================================ */
+
+   @media (max-width: 768px) {
+
+    /* Change the scroll direction to vertical */
+    .horizontal-scroll {
+        overflow-x: hidden;      /* Disable horizontal scroll */
+        overflow-y: auto;        /* Enable vertical scroll */
+        white-space: normal;     /* Allow images to wrap/stack */
+        height: 70vh;            /* Give it a scrollable height */
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    /* Stack images vertically */
+    .scroll-track {
+        display: block;          /* Change from inline-block to block */
+        height: auto;            /* Let it grow with content */
+        width: 100%;
+    }
+
+    /* Full-width images stacked on top of each other */
+    .scroll-track img {
+        display: block;
+        width: 100%;             /* Fill the width */
+        height: auto;            /* Maintain aspect ratio */
+        margin-right: 0;         /* No right gap */
+        margin-bottom: 20px;     /* Space between stacked images */
+        border-radius: 4px;
+    }
+}
