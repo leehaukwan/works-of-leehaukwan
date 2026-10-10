@@ -355,4 +355,146 @@ body {
 .social-link svg {
     display: block;
     flex-shrink: 0;            /* Prevents icon from shrinking */
+/* ============================================
+   MOBILE MENU TOGGLE
+   ============================================ */
+
+/* Hide toggle button on desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* --- Mobile Styles --- */
+@media (max-width: 768px) {
+
+    /* Show the toggle button */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #1a1a1a;
+        transition: all 0.3s ease;
+    }
+
+    /* Animate toggle into an X when open */
+    .menu-toggle.open span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Sidebar hidden off-screen by default */
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+        width: 250px;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Sidebar slides in when open */
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    /* Content takes full width on mobile */
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 60px 20px 40px 20px;  /* Top padding for toggle button */
+    }
+
+    /* Remove left margin from project page on mobile */
+    .project-page {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Adjust home page on mobile */
+    .home-page .content {
+        padding-right: 0;
+        padding-left: 20px;
+    }
+
+    .home-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .intro-text {
+        max-width: 100%;
+    }
+
+    .scroll-track {
+        height: 50vh;
+    }
+
+    /* Text pages */
+    .text-page {
+        max-width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    /* Two-column text stacks vertically on mobile */
+    .two-column {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .two-column .chinese {
+        padding-right: 0;
+        border-right: none;
+    }
+
+    .two-column .english {
+        padding-left: 0;
+    }
+
+    /* Portfolio grid on mobile */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Project text on mobile */
+    .project-text {
+        padding: 25px 20px;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scroll-track {
+        height: 40vh;
+    }
+}
 }

@@ -12,7 +12,21 @@
     <link rel="stylesheet" href="css/project1.css" />
     <link rel="stylesheet" href="css/project2.css" />
   </head>
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    function toggleMenu() {
+      const sidebar = document.querySelector(".sidebar");
+      const toggle = document.querySelector(".menu-toggle");
+      sidebar.classList.toggle("open");
+      toggle.classList.toggle("open");
+    }
+  </script>
   <body>
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <div class="container">
       <!-- LEFT SIDEBAR NAVIGATION -->
       <nav class="sidebar">
@@ -90,5 +104,14 @@
         <!-- END .project-text -->
       </main>
     </div>
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      function toggleMenu() {
+        const sidebar = document.querySelector(".sidebar");
+        const toggle = document.querySelector(".menu-toggle");
+        sidebar.classList.toggle("open");
+        toggle.classList.toggle("open");
+      }
+    </script>
   </body>
 </html>
