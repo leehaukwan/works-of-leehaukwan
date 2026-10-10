@@ -355,6 +355,7 @@ body {
 .social-link svg {
     display: block;
     flex-shrink: 0;            /* Prevents icon from shrinking */
+}
 /* ============================================
    MOBILE MENU TOGGLE
    ============================================ */
@@ -496,5 +497,4 @@ body {
     .scroll-track {
         height: 40vh;
     }
-}
 }
